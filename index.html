@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Piyush Patil | Ultra Premium Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Particle Background -->
+  <canvas id="bg"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h2>Piyush Patil</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="theme-toggle" id="themeToggle">🌙</li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero">
+      <div class="hero-text reveal">
+        <h1>Hi, I'm <span>Piyush Patil</span></h1>
+        <div class="typing" id="typing"></div>
+        <p>
+          I’m an IT engineering student and Software developer passionate about crafting
+          immersive, high-performance web experiences that blend creativity with clean code.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects"><button class="btn btn-primary">View Projects</button></a>
+          <a href="#contact"><button class="btn btn-outline">Hire Me</button></a>
+          <a href="resume.pdf" download><button class="btn btn-outline">Download Resume</button></a>
+        </div>
+      </div>
+
+      <div class="profile-scene reveal">
+        <div class="profile-card" id="profileCard">
+          <div class="profile-badge">AVAILABLE</div>
+          <!-- 🔥 Your ultra premium hologram profile image -->
+          <img src="image.jpg" alt="Piyush Patil" class="insane-img hologram glass parallax">
+          <div class="profile-info">
+            <h3>Piyush Patil</h3>
+            <p>Software Developer • IT Engineer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-title reveal"><span>About</span> Me</h2>
+    <p class="section-subtitle reveal">A quick snapshot of who I am, what I love building, and what drives me.</p>
+
+    <div class="about-grid reveal">
+      <div class="about-card glass">
+        <h3>🎯 Who I Am</h3>
+        <p>IT engineering student, passionate about frontend development, UI/UX design, and web technologies.</p>
+      </div>
+      <div class="about-card glass">
+        <h3>⚡ What I Do</h3>
+        <p>HTML, CSS, JavaScript, React, Node.js, MongoDB, UI/UX design, and real-world project solutions.</p>
+      </div>
+      <div class="about-card glass">
+        <h3>🚀 My Goal</h3>
+        <p>Become a full-stack developer, contribute to impactful products, and innovate continuously.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2 class="section-title reveal"><span>Skills</span> & Tools</h2>
+    <p class="section-subtitle reveal">Technologies and tools I use to bring ideas to life.</p>
+    <div class="skills-grid reveal">
+      <div class="skill-card glass"><h4>HTML5</h4></div>
+      <div class="skill-card glass"><h4>CSS3</h4></div>
+      <div class="skill-card glass"><h4>JavaScript</h4></div>
+      <div class="skill-card glass"><h4>React.js</h4></div>
+      <div class="skill-card glass"><h4>Node.js</h4></div>
+      <div class="skill-card glass"><h4>MongoDB</h4></div>
+      <div class="skill-card glass"><h4>Git & GitHub</h4></div>
+      <div class="skill-card glass"><h4>UI/UX Design</h4></div>
+      <div class="skill-card glass"><h4>Figma</h4></div>
+      <div class="skill-card glass"><h4>REST APIs</h4></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2 class="section-title reveal"><span>Featured</span> Projects</h2>
+    <p class="section-subtitle reveal">A selection of projects showcasing my skills and problem-solving abilities.</p>
+    <div class="projects-grid reveal">
+      <div class="project-card glass" onclick="openModal(1)">
+        <h3>Shopping Cart System</h3>
+        <p>A full-featured academic shopping cart application with product listing, cart management, and checkout functionality.</p>
+        <span>Click to view →</span>
+      </div>
+      <div class="project-card glass" onclick="openModal(2)">
+        <h3>Healthcare Management App</h3>
+        <p>A healthcare application for managing patient data, appointments, and digital medical records with a clean UI.</p>
+        <span>Click to view →</span>
+      </div>
+      <div class="project-card glass" onclick="openModal(3)">
+        <h3>Portfolio Website</h3>
+        <p>A premium animated portfolio showcasing skills, projects, and contact details with modern UI design.</p>
+        <span>Click to view →</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title reveal"><span>Contact</span> Me</h2>
+    <p class="section-subtitle reveal">Want to collaborate or hire me? Let’s talk.</p>
+    <form class="contact-form glass reveal" onsubmit="sendMessage(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button class="btn btn-primary" type="submit">Send Message</button>
+      <p id="form-status"></p>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Piyush Patil |
+    <a href="https://www.linkedin.com/in/piyush-patil-3a3361298" target="_blank">LinkedIn</a> |
+    <a href="#" target="_blank">GitHub</a>
+  </footer>
+
+  <!-- PROJECT MODAL -->
+  <div class="modal" id="projectModal">
+    <div class="modal-content glass">
+      <div class="modal-close" onclick="closeModal()">✖</div>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc" style="margin-top:16px; line-height:1.7;"></p>
+      <p id="modalTech" style="margin-top:14px; font-weight:600; color:var(--accent);"></p>
+      <a id="modalLink" href="#" target="_blank" style="margin-top:20px; display:inline-block; font-weight:700; color:var(--accent2); text-decoration:none;">View Project →</a>
+    </div>
+  </div>
+
+  <!-- AI Voice Intro -->
+  <button id="voiceIntro" class="btn primary">🎤 Listen to AI Intro</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
